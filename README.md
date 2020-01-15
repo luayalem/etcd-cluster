@@ -5,7 +5,7 @@ Install TLS etcd cluster
 	```bash
 	git clone https://github.com/luayalem/etcd-cluster.git
 	```
-2. copy etcd certs to `~/etcd-certs` on each of the nodes
+2. copy etcd certs to each node and place them under `~/etcd-certs`
 3. updat hosts file with your hosts IP
 3. install etcd cluster
 	```bash
