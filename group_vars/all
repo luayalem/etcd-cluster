@@ -22,7 +22,7 @@ etcd_settings:
   "ETCD_ADVERTISE_CLIENT_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_client_port}}"
   "ETCD_INITIAL_ADVERTISE_PEER_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_peer_port}}"
   "ETCD_LISTEN_PEER_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_peer_port}}"
-  "ETCD_LISTEN_CLIENT_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_client_port + '}}"
+  "ETCD_LISTEN_CLIENT_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_client_port}}"
   "ETCD_INITIAL_CLUSTER_STATE": "new" 
   "ETCD_DATA_DIR": "{{etcd_data_dir}}"
   "ETCD_AUTO_COMPACTION_RETENTION": "0"
