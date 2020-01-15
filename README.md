@@ -10,5 +10,5 @@ Install TLS etcd cluster
 3. install etcd cluster
 	```bash
 	cd etcd-cluster
-        ansible-playbook -i hosts play.yaml
+      ansible-playbook -i hosts play.yaml
 	```
