@@ -93,7 +93,8 @@
     - etcd
     - etcd-systemd
 
-- meta: flush_handlers
+- name: Run handlers
+  meta: flush_handlers
 
 - name: Enable and start etcd
   service:
