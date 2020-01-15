@@ -1,6 +1,6 @@
 # etcd-cluster
 Install TLS etcd cluster
-## Bosh Lite Installation
+## Installation
 1. Checkout the `etcd-cluster`
 	```bash
 	git clone https://github.com/luayalem/etcd-cluster.git
