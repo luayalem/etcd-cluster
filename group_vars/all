@@ -16,19 +16,19 @@ etcd_settings:
   "ETCD_PEER_CERT_FILE": "{{etcd_conf_dir}}/cert-etcd.pem"
   "ETCD_PEER_KEY_FILE": "{{etcd_conf_dir}}/cert-etcd-key.pem"
   "ETCD_PEER_TRUSTED_CA_FILE": "{{etcd_conf_dir}}/ca-etcd.pem"
-  "ETCD_PEER_CLIENT_CERT_AUTH": "true" # # Enable peer client cert authentication
-  "ETCD_CLIENT_CERT_AUTH": "true" # Enable client cert authentication
+  "ETCD_PEER_CLIENT_CERT_AUTH": "true"
+  "ETCD_CLIENT_CERT_AUTH": "true"
   "ETCD_TRUSTED_CA_FILE": "{{etcd_conf_dir}}/ca-etcd.pem"
   "ETCD_ADVERTISE_CLIENT_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_client_port}}"
   "ETCD_INITIAL_ADVERTISE_PEER_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_peer_port}}"
   "ETCD_LISTEN_PEER_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_peer_port}}"
-  "ETCD_LISTEN_CLIENT_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_client_port + ',https://127.0.0.1:' + etcd_client_port}}"
-  "ETCD_INITIAL_CLUSTER_STATE": "new" # Initial cluster state ('new' or 'existing')
-  "ETCD_DATA_DIR": "{{etcd_data_dir}}" # etcd data directory (etcd database files so to say)
-  "ETCD_AUTO_COMPACTION_RETENTION": "0" # Auto compaction retention in hour. 0 means disable auto compaction.
-  "ETCD_SNAPSHOT_COUNT": "100000" # Number of committed transactions to trigger a snapshot to disk
-  "ETCD_HEARTBEAT_INTERVAL": "100" # Time (in milliseconds) of a heartbeat interval
-  "ETCD_ELECTION_TIMEOUT": "1000" # Time (in milliseconds) for an election to timeout. See tuning documentation for details
-  "ETCD_MAX_SNAPSHOTS": "5" # Maximum number of snapshot files to retain (0 is unlimited)
-  "ETCD_MAX_WAL": "5" # Maximum number of wal files to retain (0 is unlimited)
+  "ETCD_LISTEN_CLIENT_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_client_port + '}}"
+  "ETCD_INITIAL_CLUSTER_STATE": "new" 
+  "ETCD_DATA_DIR": "{{etcd_data_dir}}"
+  "ETCD_AUTO_COMPACTION_RETENTION": "0"
+  "ETCD_SNAPSHOT_COUNT": "100000"
+  "ETCD_HEARTBEAT_INTERVAL": "100"
+  "ETCD_ELECTION_TIMEOUT": "1000"
+  "ETCD_MAX_SNAPSHOTS": "5"
+  "ETCD_MAX_WAL": "5"
 
