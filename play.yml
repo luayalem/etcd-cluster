@@ -1,0 +1,9 @@
+---
+    # This installs etcd cluster
+    
+    - name: Install ETCD
+      hosts: nodes
+      become: true
+    
+      roles:
+        - etcd
