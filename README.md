@@ -1,7 +1,7 @@
 # etcd-cluster
-Install TLS etcd cluster
+Install TLS etcd cluster 
 ## Installation
-1. clone the `etcd-cluster`
+1. clone the `etcd-cluster`repo
 	```bash
 	git clone https://github.com/luayalem/etcd-cluster.git
 	```
