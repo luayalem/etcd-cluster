@@ -24,12 +24,13 @@ etcd_settings:
   "ETCD_LISTEN_CLIENT_URLS": "{{'https://' + hostvars[inventory_hostname]['ansible_' + etcd_interface].ipv4.address + ':' + etcd_client_port}}"
   "ETCD_INITIAL_CLUSTER_STATE": "new" 
   "ETCD_DATA_DIR": "{{etcd_data_dir}}"
-  "ETCD_AUTO_COMPACTION_RETENTION": "0"
+  "ETCD_AUTO_COMPACTION_RETENTION": "3"
   "ETCD_SNAPSHOT_COUNT": "100000"
   "ETCD_HEARTBEAT_INTERVAL": "100"
   "ETCD_ELECTION_TIMEOUT": "1000"
   "ETCD_MAX_SNAPSHOTS": "5"
   "ETCD_MAX_WAL": "5"
+  "ETCD_QUOTA_BACKEND_BYTES": "8589934592"
 
 etcd_certificates:
   - ca-etcd.pem        
