@@ -31,9 +31,4 @@ etcd_settings:
   "ETCD_MAX_SNAPSHOTS": "5"
   "ETCD_MAX_WAL": "5"
   "ETCD_QUOTA_BACKEND_BYTES": "8589934592"
-
-etcd_certificates:
-  - ca-etcd.pem        
-  - ca-etcd-key.pem    
-  - cert-etcd.pem      
-  - cert-etcd-key.pem  
+  
